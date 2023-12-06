@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700">
+<nav x-data="{ open: false }" class="bg-white dark:bg-gray-800 dark:border-gray-700 fixed w-full">
     <!-- Primary Navigation Menu -->
     <div class="max-w-100 mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-20">
@@ -14,13 +14,13 @@
             <div class="flex-grow"></div>
 
             <!-- Search Bar -->
-            <div class="flex items-center ml-3">
-                <div class="w-96 h-10 pl-2.5 py-1 bg-zinc-100 rounded-lg flex items-center">
+            <div class="flex items-center ml-3 relative">
+                <div class="w-96 h-10 pl-2.5 py-1 bg-zinc-100 rounded-lg flex items-center grow shrink basis-0 bg-zinc-100 text-neutral-700 text-base font-normal font-['Nunito Sans'] leading-normal border-none focus:outline-none rounded-l-lg rounded-r-lg transition duration-200 ease-in-out">
                     <img class="w-6 h-7 relative mr-2" src="{{ asset('css/images/search.svg') }}" alt="Search">
                     <input
                         id="searchInput"
                         type="text"
-                        class="grow shrink basis-0 bg-zinc-100 text-neutral-700 text-base font-normal font-['Nunito Sans'] leading-normal focus:outline-none focus:border-none border-none"
+                        class="w-full h-full bg-zinc-100 text-neutral-700 text-base font-normal font-['Nunito Sans'] leading-normal border-none focus:outline-none rounded-l-lg rounded-r-lg"
                         placeholder="Search here"
                     >
                 </div>
@@ -28,7 +28,7 @@
 
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ms-6 relative">
-                <x-dropdown align="right" width="48" style="position: absolute; top: -12rem; right: 0;">
+                <x-dropdown align="right" width="48" style="position: absolute; top: 2.5rem; right: 0;">
                     <x-slot name="trigger">
                         <button class="inline-flex items-center px-3 py-2 text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150">
                             <div class="w-10 h-10 relative">
@@ -46,7 +46,7 @@
 
                     <x-slot name="content">
                     <!-- Profile Button -->    
-                        <x-dropdown-link :href="route('profile.edit')" class="font-bold border-b hover:text-[#EFF0FF] hover:bg-[#4F74BB] active:bg-[#2D6B9A] active:text-[#EFF0FF] rounded-md">
+                        <x-dropdown-link :href="route('profile.edit')" class="font-bold border-b hover:text-[#EFF0FF] hover:bg-[#2C56A6] active:bg-[#4F74BB] active:text-[#EFF0FF] rounded-md">
                             {{ __('My Account') }}
                         </x-dropdown-link>
 
@@ -54,7 +54,7 @@
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
 
-                            <x-dropdown-link :href="route('logout')" class="hover:text-[#EFF0FF] hover:bg-[#4F74BB] active:bg-[#2D6B9A] active:text-[#EFF0FF] rounded-md flex items-center justify-between stroke-[#71717A] hover:stroke-white"
+                            <x-dropdown-link :href="route('logout')" class="hover:text-[#EFF0FF] hover:bg-[#2C56A6] active:bg-[#4F74BB] active:text-[#EFF0FF] rounded-md flex items-center justify-between stroke-[#71717A] hover:stroke-white"
                                     onclick="event.preventDefault();
                                                 this.closest('form').submit();">
                                 {{ __('Log Out') }}
@@ -179,7 +179,7 @@
             </button>
             
             <!-- Settings Section -->
-            <button class="w-full px-4 py-2 flex items-center rounded-md hover:text-[#EFF0FF] hover:bg-[#4F74BB] active:bg-[#2D6B9A] active:text-[#EFF0FF]">
+            <button class="w-full px-4 py-2 flex items-center rounded-md hover:text-[#EFF0FF] hover:bg-[#4F74BB] active:bg-[#2D6B9A] active:text-[#EFF0FF] mt-auto" style="margin-top: 100%;">
                 <div class="w-8 h-8 rounded-md shadow justify-center items-center flex">
                     <div class="w-5 h-5 relative">
                         <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
