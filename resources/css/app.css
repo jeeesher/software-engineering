@@ -8,7 +8,8 @@
     left: 0;
     width: 100%;
     height: 1px;
-    background-color: #999DA3; /* Adjust color as needed */
+    background-color: #999DA3; 
     content: "";
     z-index: 0;
 }
+

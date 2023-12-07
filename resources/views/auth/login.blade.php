@@ -13,7 +13,8 @@
                             type="email"
                             name="email"
                             :value="old('email')"
-                            required autofocus autocomplete="username">
+                            required autofocus autocomplete="username"
+                            placeholder="juandelacruz@plm.edu.ph">
                         <x-input-error :messages="$errors->get('email')" class="mt-2" />
                     </div>
                 </div>
@@ -33,7 +34,8 @@
                             id="password"
                             type="password"
                             name="password"
-                            required autocomplete="current-password"></input>
+                            required autocomplete="current-password"
+                            placeholder="*************"></input>
                         <x-input-error :messages="$errors->get('password')" class="mt-2" />
                         <div class="w-12 h-12 top-0  right-0 absolute justify-center items-center gap-2.5 flex">
                             <button type="button" id="togglePassword" onclick="togglePassword()">

@@ -16,7 +16,9 @@
             <!-- Search Bar -->
             <div class="flex items-center ml-3 relative">
                 <div class="w-96 h-10 pl-2.5 py-1 bg-zinc-100 rounded-lg flex items-center grow shrink basis-0 bg-zinc-100 text-neutral-700 text-base font-normal font-['Nunito Sans'] leading-normal border-none focus:outline-none rounded-l-lg rounded-r-lg transition duration-200 ease-in-out">
-                    <img class="w-6 h-7 relative mr-2" src="{{ asset('css/images/search.svg') }}" alt="Search">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" fill="none">
+                        <path d="M20.3778 22.6405L14.6174 16.8801M16.5376 12.0798C16.5376 12.9624 16.3637 13.8362 16.026 14.6516C15.6883 15.467 15.1932 16.2078 14.5692 16.8319C13.9451 17.4559 13.2043 17.951 12.3889 18.2887C11.5736 18.6264 10.6997 18.8002 9.81712 18.8002C8.93458 18.8002 8.06068 18.6264 7.24532 18.2887C6.42996 17.951 5.6891 17.4559 5.06505 16.8319C4.441 16.2078 3.94598 15.467 3.60824 14.6516C3.27051 13.8362 3.09668 12.9624 3.09668 12.0798C3.09668 10.2974 3.80472 8.58807 5.06505 7.32774C6.32538 6.06742 8.03475 5.35938 9.81712 5.35938C11.5995 5.35937 13.3089 6.06742 14.5692 7.32774C15.8295 8.58807 16.5376 10.2974 16.5376 12.0798Z" stroke="#434343" stroke-width="1.92012" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
                     <input
                         id="searchInput"
                         type="text"
@@ -31,10 +33,11 @@
                 <x-dropdown align="right" width="48" style="position: absolute; top: 2.5rem; right: 0;">
                     <x-slot name="trigger">
                         <button class="inline-flex items-center px-3 py-2 text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150">
-                            <div class="w-10 h-10 relative">
-                                <img class="w-8 h-8 left-[5px] top-[5px] absolute" src="{{ asset('css/images/user.svg') }}" alt="User">
-                            </div>
-                            <div class="ml-2">Mara Calinao</div> <!-- {{ Auth::user()->name }} if getting the name from the db record -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                <path d="M19.8797 9.05015C19.8797 11.7085 17.7247 13.8635 15.0664 13.8635C12.4081 13.8635 10.2531 11.7085 10.2531 9.05015C10.2531 6.39182 12.4081 4.23682 15.0664 4.23682C17.7247 4.23682 19.8797 6.39182 19.8797 9.05015Z" stroke="#434343" stroke-width="2.40667" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M15.0664 17.4735C10.4143 17.4735 6.64307 21.2447 6.64307 25.8968H23.4897C23.4897 21.2447 19.7185 17.4735 15.0664 17.4735Z" stroke="#434343" stroke-width="2.40667" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <div class="ml-2">{{ Auth::user()->name }}</div> <!-- {{ Auth::user()->name }} if getting the name from the db record -->
 
                             <div class="ms-1">  
                                 <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
@@ -119,7 +122,7 @@
         <div class="w-56 h-11 left-[30px] top-[33px] absolute text-white text-xl font-semibold font-['Inter'] leading-9">Accounts Payable</div>
         <div class="left-[20px] top-[84px] absolute flex-col justify-start items-start gap-1 inline-flex items-center">
             <!-- Dashboard Section -->
-            <button class="w-56 px-4 py-2 flex items-center rounded-md hover:text-[#EFF0FF] hover:bg-[#4F74BB] active:bg-[#2D6B9A] active:text-[#EFF0FF]">
+            <button class="w-56 px-4 py-2 flex items-center rounded-md hover:text-[#EFF0FF] hover:bg-[#2C56A6] active:bg-[#2D6B9A] active:text-[#EFF0FF]">
                 <div class="w-8 h-8 rounded-md shadow justify-center items-center flex">
                     <div class="w-5 h-5 relative">
                         <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
@@ -131,7 +134,7 @@
             </button>
 
             <!-- Payables Section -->
-            <button class="w-full px-4 py-2 flex items-center rounded-md hover:text-[#EFF0FF] hover:bg-[#4F74BB] active:bg-[#2D6B9A] active:text-[#EFF0FF]">
+            <button class="w-full px-4 py-2 flex items-center rounded-md hover:text-[#EFF0FF] hover:bg-[#2C56A6] active:bg-[#2D6B9A] active:text-[#EFF0FF]">
                 <div class="w-8 h-8 rounded-md shadow justify-center items-center flex">
                     <div class="w-5 h-5 relative items-center flex">
                         <svg xmlns="http://www.w3.org/2000/svg" width="26" height="25" viewBox="0 0 26 25" fill="none">
@@ -143,7 +146,7 @@
             </button>
 
             <!-- Tracking Section -->
-            <button class="w-full px-4 py-2 flex items-center rounded-md hover:text-[#EFF0FF] hover:bg-[#4F74BB] active:bg-[#2D6B9A] active:text-[#EFF0FF]">
+            <button class="w-full px-4 py-2 flex items-center rounded-md hover:text-[#EFF0FF] hover:bg-[#2C56A6] active:bg-[#2D6B9A] active:text-[#EFF0FF]">
                 <div class="w-8 h-8 rounded-md shadow justify-center items-center flex">
                     <div class="w-5 h-5 relative">
                         <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
@@ -155,7 +158,7 @@
             </button>
 
             <!-- Notifications Section -->
-            <button class="w-full px-4 py-2 flex items-center rounded-md hover:text-[#EFF0FF] hover:bg-[#4F74BB] active:bg-[#2D6B9A] active:text-[#EFF0FF]">
+            <button class="w-full px-4 py-2 flex items-center rounded-md hover:text-[#EFF0FF] hover:bg-[#2C56A6] active:bg-[#2D6B9A] active:text-[#EFF0FF]">
                 <div class="w-8 h-8 rounded-md shadow justify-center items-center flex">
                     <div class="w-5 h-5 relative">
                         <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
@@ -167,7 +170,7 @@
             </button>
 
             <!-- Folders Section -->
-            <button class="w-full px-4 py-2 flex items-center rounded-md hover:text-[#EFF0FF] hover:bg-[#4F74BB] active:bg-[#2D6B9A] active:text-[#EFF0FF]">
+            <button class="w-full px-4 py-2 flex items-center rounded-md hover:text-[#EFF0FF] hover:bg-[#2C56A6] active:bg-[#2D6B9A] active:text-[#EFF0FF]">
                 <div class="w-8 h-8 rounded-md shadow justify-center items-center flex">
                     <div class="w-5 h-5 relative">
                         <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
@@ -179,7 +182,7 @@
             </button>
             
             <!-- Settings Section -->
-            <button class="w-full px-4 py-2 flex items-center rounded-md hover:text-[#EFF0FF] hover:bg-[#4F74BB] active:bg-[#2D6B9A] active:text-[#EFF0FF] mt-auto" style="margin-top: 100%;">
+            <button class="w-full px-4 py-2 flex items-center rounded-md hover:text-[#EFF0FF] hover:bg-[#2C56A6] active:bg-[#2D6B9A] active:text-[#EFF0FF] mt-auto" style="margin-top: 100%;">
                 <div class="w-8 h-8 rounded-md shadow justify-center items-center flex">
                     <div class="w-5 h-5 relative">
                         <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
