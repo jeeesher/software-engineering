@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="bg-white dark:bg-gray-800 dark:border-gray-700 fixed w-full">
+<nav x-data="{ open: false }" class="bg-white w-screen dark:bg-gray-800 fixed top-0 z-50">
     <!-- Primary Navigation Menu -->
     <div class="max-w-100 mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-20">
@@ -14,17 +14,12 @@
             <div class="flex-grow"></div>
 
             <!-- Search Bar -->
-            <div class="flex items-center ml-3 relative">
-                <div class="w-96 h-10 pl-2.5 py-1 bg-zinc-100 rounded-lg flex items-center grow shrink basis-0 bg-zinc-100 text-neutral-700 text-base font-normal font-['Nunito Sans'] leading-normal border-none focus:outline-none rounded-l-lg rounded-r-lg transition duration-200 ease-in-out">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" fill="none">
+            <div class="flex items-center">
+                <div class="relative">
+                    <svg class="absolute left-4 top-1/2 transform -translate-y-1/2" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" fill="none" aria-hidden="true">
                         <path d="M20.3778 22.6405L14.6174 16.8801M16.5376 12.0798C16.5376 12.9624 16.3637 13.8362 16.026 14.6516C15.6883 15.467 15.1932 16.2078 14.5692 16.8319C13.9451 17.4559 13.2043 17.951 12.3889 18.2887C11.5736 18.6264 10.6997 18.8002 9.81712 18.8002C8.93458 18.8002 8.06068 18.6264 7.24532 18.2887C6.42996 17.951 5.6891 17.4559 5.06505 16.8319C4.441 16.2078 3.94598 15.467 3.60824 14.6516C3.27051 13.8362 3.09668 12.9624 3.09668 12.0798C3.09668 10.2974 3.80472 8.58807 5.06505 7.32774C6.32538 6.06742 8.03475 5.35938 9.81712 5.35938C11.5995 5.35937 13.3089 6.06742 14.5692 7.32774C15.8295 8.58807 16.5376 10.2974 16.5376 12.0798Z" stroke="#434343" stroke-width="1.92012" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
-                    <input
-                        id="searchInput"
-                        type="text"
-                        class="w-full h-full bg-zinc-100 text-neutral-700 text-base font-normal font-['Nunito Sans'] leading-normal border-none focus:outline-none rounded-l-lg rounded-r-lg"
-                        placeholder="Search here"
-                    >
+                    <input class="w-96 h-10 pl-10 py-1 bg-zinc-100 rounded-lg flex items-center grow shrink basis-0 text-neutral-700 border-none text-base font-normal font-['Nunito Sans'] leading-normal ml-2" placeholder="Search here"></input>
                 </div>
             </div>
 
@@ -122,7 +117,7 @@
         <div class="w-56 h-11 left-[30px] top-[33px] absolute text-white text-xl font-semibold font-['Inter'] leading-9">Accounts Payable</div>
         <div class="left-[20px] top-[84px] absolute flex-col justify-start items-start gap-1 inline-flex items-center">
             <!-- Dashboard Section -->
-            <button class="w-56 px-4 py-2 flex items-center rounded-md hover:text-[#EFF0FF] hover:bg-[#2C56A6] active:bg-[#2D6B9A] active:text-[#EFF0FF]">
+            <a href="{{ route('dashboard') }}" class="w-56 px-4 py-2 flex items-center rounded-md hover:text-[#EFF0FF] hover:bg-[#2C56A6] active:bg-[#2D6B9A] active:text-[#EFF0FF]">
                 <div class="w-8 h-8 rounded-md shadow justify-center items-center flex">
                     <div class="w-5 h-5 relative">
                         <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
@@ -131,10 +126,10 @@
                     </div>
                 </div>
                 <div class="text-white text-l font-normal font-sans leading-7 ml-3">Dashboard</div>
-            </button>
+            </a>   
 
             <!-- Payables Section -->
-            <button class="w-full px-4 py-2 flex items-center rounded-md hover:text-[#EFF0FF] hover:bg-[#2C56A6] active:bg-[#2D6B9A] active:text-[#EFF0FF]">
+            <a href="{{ route('payables') }}" class="w-full px-4 py-2 flex items-center rounded-md hover:text-[#EFF0FF] hover:bg-[#2C56A6] active:bg-[#2D6B9A] active:text-[#EFF0FF]">
                 <div class="w-8 h-8 rounded-md shadow justify-center items-center flex">
                     <div class="w-5 h-5 relative items-center flex">
                         <svg xmlns="http://www.w3.org/2000/svg" width="26" height="25" viewBox="0 0 26 25" fill="none">
@@ -143,10 +138,10 @@
                     </div>
                 </div>
                 <div class="text-white text-l font-normal font-sans leading-7 ml-3">Payables</div>
-            </button>
+            </a>
 
             <!-- Tracking Section -->
-            <button class="w-full px-4 py-2 flex items-center rounded-md hover:text-[#EFF0FF] hover:bg-[#2C56A6] active:bg-[#2D6B9A] active:text-[#EFF0FF]">
+            <a href="{{ route('tracking') }}" class="w-full px-4 py-2 flex items-center rounded-md hover:text-[#EFF0FF] hover:bg-[#2C56A6] active:bg-[#2D6B9A] active:text-[#EFF0FF]">
                 <div class="w-8 h-8 rounded-md shadow justify-center items-center flex">
                     <div class="w-5 h-5 relative">
                         <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
@@ -155,7 +150,7 @@
                     </div>
                 </div>
                 <div class="text-white text-l font-normal font-sans leading-7 ml-3">Tracking</div>
-            </button>
+            </a>
 
             <!-- Notifications Section -->
             <button class="w-full px-4 py-2 flex items-center rounded-md hover:text-[#EFF0FF] hover:bg-[#2C56A6] active:bg-[#2D6B9A] active:text-[#EFF0FF]">
