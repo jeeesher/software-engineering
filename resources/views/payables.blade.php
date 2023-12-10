@@ -171,7 +171,7 @@
                     <div class="text-zinc-950 text-sm font-medium font-['Inter'] leading-tight">Delete</div>
                 </x-secondary-button>
 
-                <!-- Filter/Sort Dropdown -->
+                <!-- Sort Dropdown -->
                 <div class="hidden sm:flex sm:items-center sm:ms-6 relative">
                     <div class="custom-dropdown inline-flex items-center relative">
                         <x-secondary-button class="bg-white border border-zinc-200 gap-2">
@@ -235,7 +235,6 @@
                             
                             <div class="custom-option" data-value="Export">
                                 <div class="option-content justify-between">
-                                    
                                     <div class="text">Excel</div>
                                     <div class="svg-icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -246,7 +245,6 @@
                             </div>
                             <div class="custom-option" data-value="Export">
                                 <div class="option-content justify-between">
-                                    
                                     <div class="text">Pdf</div>
                                     <div class="svg-icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -272,6 +270,7 @@
         </h2>
     </x-slot>
 
+    <!-- Payables Table -->
     <div class="py-2 ml-64">
         <div x-data="dataHandler()" class="max-w-10xl mx-auto sm:px-6 lg:px-8 space-y-6 ml-5">
             <div class="shadow-sm border rounded-lg">
