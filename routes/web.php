@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\PayablesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,7 +20,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', [DashboardController::class, 'show'])
+Route::get('/dashboard', [DashboardController::class, 'show'])              
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
 
@@ -31,6 +32,14 @@ Route::middleware('auth')->group(function () {
     Route::get('/payables', function () {
         return view('payables');
     })->name('payables');
+
+    Route::get('/payables/edit', function () {
+        return view('payables-edit');
+    })->name('payables-edit');
+
+    Route::get('/payables/view', function () {
+        return view('payables-view');
+    })->name('payables-view');  
 
     Route::get('/tracking', function () {
         return view('tracking');

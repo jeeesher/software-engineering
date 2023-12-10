@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Login Page Line */
 .line {
     position: absolute;
     top: 50%;
@@ -11,5 +12,74 @@
     background-color: #999DA3; 
     content: "";
     z-index: 0;
+}
+
+
+/* Select Dropdown */
+.custom-dropdown {
+    position: relative;
+}
+
+.custom-dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.375rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.custom-option {
+    padding-left: 1rem;
+    cursor: pointer;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+}
+
+.custom-option:hover {
+    background-color: #f5f7fa;
+}
+
+.custom-option:first-child {
+    border-radius: 0.375rem 0.375rem 0 0;
+}
+
+.custom-option:last-child {
+    border-radius: 0 0 0.375rem 0.375rem;
+}
+
+.option-content {
+    display: flex;
+    align-items: center;
+}
+
+.svg-icon {
+    margin-right: 8px;
+    display: none;
+}
+
+.custom-option.custom-option.clicked .svg-icon {
+    display: inline-flex;
+}
+
+.custom-option.custom-option.clicked .text {
+    color: black;
+}
+
+.show {
+    display: block;
+}
+
+
+/* Text Overflow Formatting */
+.overflow-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
