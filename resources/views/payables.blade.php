@@ -258,20 +258,22 @@
                 </div>                    
 
                 <!-- Add New Payable Button -->
-                <x-primary-button class="flex items-center px-3 py-2 bg-[#2D349A] rounded-md shadow justify-center gap-2 ml-6">
-                    <div class="w-4 h-4 relative">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M3.33334 7.99998H12.6667M8.00001 3.33331V12.6666" stroke="#FAFAFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <div class="text-white text-sm font-medium font-['Inter'] leading-tight">Add New Payable</div>
-                </x-primary-button>
+                <a href="{{ route('payables-add') }}">
+                    <x-primary-button class="flex items-center px-3 py-2 bg-[#2D349A] rounded-md shadow justify-center gap-2 ml-6">
+                        <div class="w-4 h-4 relative">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M3.33334 7.99998H12.6667M8.00001 3.33331V12.6666" stroke="#FAFAFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="text-white text-sm font-medium font-['Inter'] leading-tight">Add New Payable</div>
+                    </x-primary-button>
+                </a>
             </div>
         </h2>
     </x-slot>
 
     <!-- Payables Table -->
-    <div class="py-2 ml-64">
+    <div class="py-2 ml-64 pb-10">
         <div x-data="dataHandler()" class="max-w-10xl mx-auto sm:px-6 lg:px-8 space-y-6 ml-5">
             <div class="shadow-sm border rounded-lg">
                 <table class="w-full table-auto text-sm text-left">
@@ -362,7 +364,7 @@
                                                 </x-dropdown-link>
 
                                                 <!-- Track Payable Button -->    
-                                                <x-dropdown-link :href="route('profile.edit')" class="hover:text-[#EFF0FF] hover:bg-[#2C56A6] active:bg-[#4F74BB] active:text-[#EFF0FF] rounded-md">
+                                                <x-dropdown-link :href="route('tracking')" class="hover:text-[#EFF0FF] hover:bg-[#2C56A6] active:bg-[#4F74BB] active:text-[#EFF0FF] rounded-md">
                                                     {{ __('Track') }}
                                                 </x-dropdown-link>
                                             </x-slot>

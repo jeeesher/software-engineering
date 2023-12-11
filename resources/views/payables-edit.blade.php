@@ -2,7 +2,7 @@
     <!-- Title and Buttons Section-->
     <x-slot name="header" class="flex item-center justify-between">
         <h2 class="font-semibold text-3xl text-black dark:text-gray-200 leading-right ml-60 flex" style="padding-top: 4rem;">
-            {{ __('Edit Payables') }}
+            {{ __('Edit Payable') }}
 
             <div class="flex items-center ml-auto">
                 <!-- Script for the Dropdowns -->
@@ -100,36 +100,40 @@
                 </div>       
                 
                 <!-- Cancel Edit Button -->
-                <x-secondary-button :href="route('payables-view')" class="bg-white border border-zinc-200 gap-2 ml-6">
-                    <div class="w-4 h-4 relative">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M10 6.00708L6 10.0071M6 6.00708L10 10.0071M3.33333 2.00708H12.6667C13.403 2.00708 14 2.60403 14 3.34041V12.6737C14 13.4101 13.403 14.0071 12.6667 14.0071H3.33333C2.59695 14.0071 2 13.4101 2 12.6737V3.34041C2 2.60403 2.59695 2.00708 3.33333 2.00708Z" stroke="#18181B" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <div class="text-zinc-950 text-sm font-medium font-['Inter'] leading-tight">Cancel Edit</div>
-                </x-secondary-button>
+                <a href="{{ route('payables-view') }}">
+                    <x-secondary-button :href="route('payables-view')" class="bg-white border border-zinc-200 gap-2 ml-6">
+                        <div class="w-4 h-4 relative">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M10 6.00708L6 10.0071M6 6.00708L10 10.0071M3.33333 2.00708H12.6667C13.403 2.00708 14 2.60403 14 3.34041V12.6737C14 13.4101 13.403 14.0071 12.6667 14.0071H3.33333C2.59695 14.0071 2 13.4101 2 12.6737V3.34041C2 2.60403 2.59695 2.00708 3.33333 2.00708Z" stroke="#18181B" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="text-zinc-950 text-sm font-medium font-['Inter'] leading-tight">Cancel Edit</div>
+                    </x-secondary-button>
+                </a>
 
                 <!-- Save Edit Button -->
-                <x-primary-button class="flex items-center px-3 py-2 bg-[#2D349A] rounded-md shadow justify-center gap-2 ml-6">
-                    <div class="w-4 h-4 relative">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M11.3333 14.0071V8.67375H4.66667V14.0071M4.66667 2.00708V5.34041H10M12.6667 14.0071H3.33333C2.97971 14.0071 2.64057 13.8666 2.39052 13.6166C2.14048 13.3665 2 13.0274 2 12.6737V3.34041C2 2.98679 2.14048 2.64765 2.39052 2.3976C2.64057 2.14756 2.97971 2.00708 3.33333 2.00708H10.6667L14 5.34041V12.6737C14 13.0274 13.8595 13.3665 13.6095 13.6166C13.3594 13.8666 13.0203 14.0071 12.6667 14.0071Z" stroke="#FAFAFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <div class="text-white text-sm font-medium font-['Inter'] leading-tight">Save Edit</div>
-                </x-primary-button>
+                <a href="{{ route('payables-view') }}">
+                    <x-primary-button class="flex items-center px-3 py-2 bg-[#2D349A] rounded-md shadow justify-center gap-2 ml-6">
+                        <div class="w-4 h-4 relative">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M11.3333 14.0071V8.67375H4.66667V14.0071M4.66667 2.00708V5.34041H10M12.6667 14.0071H3.33333C2.97971 14.0071 2.64057 13.8666 2.39052 13.6166C2.14048 13.3665 2 13.0274 2 12.6737V3.34041C2 2.98679 2.14048 2.64765 2.39052 2.3976C2.64057 2.14756 2.97971 2.00708 3.33333 2.00708H10.6667L14 5.34041V12.6737C14 13.0274 13.8595 13.3665 13.6095 13.6166C13.3594 13.8666 13.0203 14.0071 12.6667 14.0071Z" stroke="#FAFAFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="text-white text-sm font-medium font-['Inter'] leading-tight">Save Edit</div>
+                    </x-primary-button>
+                </a>
             </div>
         </h2>
     </x-slot>
 
-    <div class="py-2 ml-64">
+    <div class="py-2 ml-64 pb-5">
         <div class="max-w-10xl mx-auto sm:px-6 lg:px-8 space-y-6 ml-5 flex">
             <!-- Payable Information Input Field -->
             <div class="bg-white dark:bg-gray-800 sm:rounded-lg lg:max-w-lg lg:w-1/3 md:w-1/2 w-full mb-10 md:mb-0">
                 <div class="text-zinc-950 text-lg font-semibold font-['Inter'] leading-loose">Payable Information</div>
 
                 <!-- BUR Input Field -->
-                <div class="mt-4">
+                <div class="mt-1">
                     <div class="flex items-center">
                         <x-input-label for="BUR" :value="__('BUR Number')" class="font-medium text-sm text-zinc-950"/>
                         <span class="text-red-500 p-1">*</span>
@@ -268,7 +272,7 @@
                                 <tbody class="text-gray-600 divide-y">
                                     <template x-for="(item, idx) in tableItems" :key="idx">
                                     <tr>
-                                        <td class="px-6 py-4 whitespace-nowrap max-w-[100px] overflow-ellipsis" x-text="item.quantity"></td>
+                                        <td class="px-6 py-4 whitespace-nowrap max-w-[100px] overflow-ellipsis font-semibold" x-text="item.quantity"></td>
                                         <td class="px-6 py-4 whitespace-nowrap max-w-[100px] overflow-ellipsis" x-text="item.particular"></td>
                                         <td class="px-6 py-4 whitespace-nowrap max-w-[100px] overflow-ellipsis" x-text="item.subamount"></td>
                                         <td class="px-6 py-4 whitespace-nowrap max-w-[100px] overflow-ellipsis" x-text="item.totalamount"></td>
@@ -294,7 +298,7 @@
                         </x-secondary-button>
                     </div>
                     <div class="mt-3 border shadow h-48">
-                        
+                        <!-- file preview -->
                     </div>
                 </div>
             </div>

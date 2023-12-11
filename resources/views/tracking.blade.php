@@ -156,7 +156,7 @@
     </x-slot>
 
     <!-- Payables Table -->
-    <div class="py-2 ml-64">
+    <div class="py-2 ml-64 pb-10">
         <div x-data="dataHandler()" class="max-w-10xl mx-auto sm:px-6 lg:px-8 space-y-6 ml-5">
             <div class="shadow-sm border rounded-lg">
                 <table class="w-full table-auto text-sm text-left">

@@ -2,19 +2,21 @@
     <!-- Title and Buttons Section-->
     <x-slot name="header" class="flex item-center justify-between ml-60">
         <div class="w-full flex items-center" style="padding-top: 4rem; padding-left: 15rem;">
-            <button :href="route('payables')" class="flex items-center w-20 bg-white gap-2">
-                <div class="w-4 h-4 relative">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
-                        <path d="M8.00016 12.698L3.3335 8.03129M3.3335 8.03129L8.00016 3.36462M3.3335 8.03129H12.6668" stroke="#2D349A" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div>
-                <div class="text-indigo-800 text-sm font-medium font-['Inter'] leading-tight">Back</div>
-            </button>
+            <a href="{{ route('payables') }}">
+                <button :href="route('payables')" class="flex items-center w-20 bg-white gap-2">
+                    <div class="w-4 h-4 relative">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                            <path d="M8.00016 12.698L3.3335 8.03129M3.3335 8.03129L8.00016 3.36462M3.3335 8.03129H12.6668" stroke="#2D349A" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="text-indigo-800 text-sm font-medium font-['Inter'] leading-tight">Back</div>
+                </button>
+            </a>
         </div>
         
         
         <h2 class="font-semibold text-3xl text-black dark:text-gray-200 leading-right ml-60 flex" style="padding-top: 2rem;">
-            {{ __('View Payables') }}
+            {{ __('View Payable') }}
 
             <div class="flex items-center ml-auto">
                 <!-- Script for the Dropdowns -->
@@ -112,21 +114,23 @@
                 </div>       
                 
                 <!-- Edit Button -->
-                <x-secondary-button :href="route('payables-edit')" class="bg-white border border-zinc-200 gap-2 ml-6">
-                    <div class="w-4 h-4 relative">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <g clip-path="url(#clip0_3076_8858)">
-                                <path d="M7.33325 2.66667H2.66659C2.31296 2.66667 1.97382 2.80714 1.72378 3.05719C1.47373 3.30724 1.33325 3.64638 1.33325 4V13.3333C1.33325 13.687 1.47373 14.0261 1.72378 14.2761C1.97382 14.5262 2.31296 14.6667 2.66659 14.6667H11.9999C12.3535 14.6667 12.6927 14.5262 12.9427 14.2761C13.1928 14.0261 13.3333 13.687 13.3333 13.3333V8.66667M12.3333 1.66665C12.5985 1.40144 12.9582 1.25244 13.3333 1.25244C13.7083 1.25244 14.068 1.40144 14.3333 1.66665C14.5985 1.93187 14.7475 2.29158 14.7475 2.66665C14.7475 3.04173 14.5985 3.40144 14.3333 3.66665L7.99992 9.99999L5.33325 10.6667L5.99992 7.99999L12.3333 1.66665Z" stroke="#18181B" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"/>
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_3076_8858">
-                                <rect width="16" height="16" fill="white"/>
-                                </clipPath>
-                            </defs>
-                        </svg>
-                    </div>
-                    <div class="text-zinc-950 text-sm font-medium font-['Inter'] leading-tight">Edit</div>
-                </x-secondary-button>
+                <a href="{{ route('payables-edit') }}">
+                    <x-secondary-button :href="route('payables-edit')" class="bg-white border border-zinc-200 gap-2 ml-6">
+                        <div class="w-4 h-4 relative">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <g clip-path="url(#clip0_3076_8858)">
+                                    <path d="M7.33325 2.66667H2.66659C2.31296 2.66667 1.97382 2.80714 1.72378 3.05719C1.47373 3.30724 1.33325 3.64638 1.33325 4V13.3333C1.33325 13.687 1.47373 14.0261 1.72378 14.2761C1.97382 14.5262 2.31296 14.6667 2.66659 14.6667H11.9999C12.3535 14.6667 12.6927 14.5262 12.9427 14.2761C13.1928 14.0261 13.3333 13.687 13.3333 13.3333V8.66667M12.3333 1.66665C12.5985 1.40144 12.9582 1.25244 13.3333 1.25244C13.7083 1.25244 14.068 1.40144 14.3333 1.66665C14.5985 1.93187 14.7475 2.29158 14.7475 2.66665C14.7475 3.04173 14.5985 3.40144 14.3333 3.66665L7.99992 9.99999L5.33325 10.6667L5.99992 7.99999L12.3333 1.66665Z" stroke="#18181B" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_3076_8858">
+                                    <rect width="16" height="16" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div class="text-zinc-950 text-sm font-medium font-['Inter'] leading-tight">Edit</div>
+                    </x-secondary-button>
+                </a>
 
                 <!-- Folders Button -->
                 <x-secondary-button class="bg-white border border-zinc-200 gap-2 ml-6">
@@ -139,24 +143,158 @@
                 </x-secondary-button>
 
                 <!-- Payable Tracking Button -->
-                <x-primary-button class="flex items-center px-3 py-2 bg-[#2D349A] rounded-md shadow justify-center gap-2 ml-6">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                        <path d="M10.6667 1.33337V4.66671H14M4.66667 5.33337V11.2C4.66667 11.4 4.8 11.6 4.93333 11.7334C5.06667 11.8667 5.26667 12 5.46667 12H10M2 8.00004V13.8667C2 14.0667 2.13333 14.2667 2.26667 14.4C2.4 14.5334 2.6 14.6667 2.8 14.6667H7.33333M14 4.00004V8.33337C14 8.86671 13.5333 9.33337 13 9.33337H8.33333C7.8 9.33337 7.33333 8.86671 7.33333 8.33337V2.33337C7.33333 1.80004 7.8 1.33337 8.33333 1.33337H11.3333L14 4.00004Z" stroke="#FAFAFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <div class="text-white text-sm font-medium font-['Inter'] leading-tight">Payable Tracking</div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                        <path d="M3.33325 8.00004H12.6666M12.6666 8.00004L7.99992 3.33337M12.6666 8.00004L7.99992 12.6667" stroke="#FAFAFA" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </x-primary-button>
+                <a href="{{ route('tracking') }}">
+                    <x-primary-button class="flex items-center px-3 py-2 bg-[#2D349A] rounded-md shadow justify-center gap-2 ml-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M10.6667 1.33337V4.66671H14M4.66667 5.33337V11.2C4.66667 11.4 4.8 11.6 4.93333 11.7334C5.06667 11.8667 5.26667 12 5.46667 12H10M2 8.00004V13.8667C2 14.0667 2.13333 14.2667 2.26667 14.4C2.4 14.5334 2.6 14.6667 2.8 14.6667H7.33333M14 4.00004V8.33337C14 8.86671 13.5333 9.33337 13 9.33337H8.33333C7.8 9.33337 7.33333 8.86671 7.33333 8.33337V2.33337C7.33333 1.80004 7.8 1.33337 8.33333 1.33337H11.3333L14 4.00004Z" stroke="#FAFAFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <div class="text-white text-sm font-medium font-['Inter'] leading-tight">Payable Tracking</div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M3.33325 8.00004H12.6666M12.6666 8.00004L7.99992 3.33337M12.6666 8.00004L7.99992 12.6667" stroke="#FAFAFA" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </x-primary-button>
+                </a>
             </div>
         </h2>
     </x-slot>
 
     <div class="py-2 ml-64">
         <div class="max-w-10xl mx-auto sm:px-6 lg:px-8 space-y-6 ml-5">
-            <div class="p-4 sm:p-8 bg-white dark:bg-gray-800 shadow sm:rounded-lg border border-gray-200">
-                <div>
-                    
+            <!-- Payable Information Section -->
+            <div class="bg-white dark:bg-gray-800 sm:rounded-lg">
+                <div class="text-zinc-950 text-lg font-semibold font-['Inter'] leading-loose">Payable Information</div>
+                <div class="flex flex-wrap w-full mx-auto">
+                    <!-- BUR Number and Total Amount Information -->
+                    <div class="pr-4 lg:w-1/3">
+                        <div class="h-full pt-3 pb-2 rounded-lg text-left relative">
+                            <div class="justify-start items-center gap-0.5 flex pb-2">
+                                <div class="text-zinc-950 text-sm font-medium font-['Inter'] leading-tight">BUR Number</div>
+                            </div>
+                            <div class="w-96 h-9 px-3 py-2 bg-white rounded-md shadow border border-gray-200 justify-start items-center gap-2 inline-flex">
+                                <div class="grow shrink basis-0 h-5 justify-start items-center gap-2 flex">
+                                    <div class="grow shrink basis-0 text-zinc-500 text-sm font-normal font-['Inter'] leading-tight">Text</div>
+                                </div>
+                            </div>
+
+                            <div class="justify-start items-center gap-0.5 flex pb-2 pt-6">
+                                <div class="text-zinc-950 text-sm font-medium font-['Inter'] leading-tight">Total Amount</div>
+                            </div>
+                            <div class="w-96 h-9 px-3 py-2 bg-white rounded-md shadow border border-gray-200 justify-start items-center gap-2 inline-flex">
+                                <div class="grow shrink basis-0 h-5 justify-start items-center gap-2 flex">
+                                    <div class="grow shrink basis-0 text-zinc-500 text-sm font-normal font-['Inter'] leading-tight">Text</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Supplier and Current Location Information -->
+                    <div class="pr-4 lg:w-1/3">
+                        <div class="h-full pt-3 pb-2 pl-2 rounded-lg text-left relative">
+                            <div class="justify-start items-center gap-0.5 flex pb-2">
+                                <div class="text-zinc-950 text-sm font-medium font-['Inter'] leading-tight">Supplier</div>
+                            </div>
+                            <div class="w-96 h-9 px-3 py-2 bg-white rounded-md shadow border border-gray-200 justify-start items-center gap-2 inline-flex">
+                                <div class="grow shrink basis-0 h-5 justify-start items-center gap-2 flex">
+                                    <div class="grow shrink basis-0 text-zinc-500 text-sm font-normal font-['Inter'] leading-tight">Text</div>
+                                </div>
+                            </div>
+
+                            <div class="justify-start items-center gap-0.5 flex pb-2 pt-6">
+                                <div class="text-zinc-950 text-sm font-medium font-['Inter'] leading-tight">Current Location</div>
+                            </div>
+                            <div class="w-96 h-9 px-3 py-2 bg-white rounded-md shadow border border-gray-200 justify-start items-center gap-2 inline-flex">
+                                <div class="grow shrink basis-0 h-5 justify-start items-center gap-2 flex">
+                                    <div class="grow shrink basis-0 text-zinc-500 text-sm font-normal font-['Inter'] leading-tight">Text</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- End-user and Remarks Information -->
+                    <div class="pr-4 lg:w-1/3">
+                        <div class="h-full pt-3 pl-4 pb-2 rounded-lg text-left relative">
+                            <div class="justify-start items-center gap-0.5 flex pb-2">
+                                <div class="text-zinc-950 text-sm font-medium font-['Inter'] leading-tight">End-user</div>
+                            </div>
+                            <div class="w-96 h-9 px-3 py-2 bg-white rounded-md shadow border border-gray-200 justify-start items-center gap-2 inline-flex">
+                                <div class="grow shrink basis-0 h-5 justify-start items-center gap-2 flex">
+                                    <div class="grow shrink basis-0 text-zinc-500 text-sm font-normal font-['Inter'] leading-tight">Text</div>
+                                </div>
+                            </div>
+
+                            <div class="justify-start items-center gap-0.5 flex pb-2 pt-6">
+                                <div class="text-zinc-950 text-sm font-medium font-['Inter'] leading-tight">Remarks</div>
+                            </div>
+                            <div class="w-96 h-9 px-3 py-2 bg-white rounded-md shadow border border-gray-200 justify-start items-center gap-2 inline-flex">
+                                <div class="grow shrink basis-0 h-5 justify-start items-center gap-2 flex">
+                                    <div class="grow shrink basis-0 text-zinc-500 text-sm font-normal font-['Inter'] leading-tight">Text</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="py-2 ml-64 pb-10">
+        <div class="max-w-10xl mx-auto sm:px-6 lg:px-8 space-y-6 ml-5">
+            <div class="pt-5 pb-3 bg-white dark:bg-gray-800 sm:rounded-lg">
+                <div class="w-full h-px border border-zinc-200"></div>
+            </div>
+
+            <!-- Particular and Payable View Section -->
+            <div class="bg-white dark:bg-gray-800 sm:rounded-lg mx-auto flex sm:flex-nowrap flex-wrap">
+                <!-- Particular Section -->
+                <div class="lg:w-2/3 md:w-1/2 bg-white rounded-lg overflow-hidden sm:mr-10 w-full items-end justify-start relative">
+                    <div class="flex items-center">
+                        <div class="text-zinc-950 text-lg font-semibold font-['Inter'] leading-loose">Particular</div>
+                    </div>
+
+                    <div x-data="{ 
+                        tableItems: [
+                            { quantity: 'Bold text column', particular: 'Regular text column', 'subamount': 'Regular text column', 'totalamount': 'Regular text column' },
+                            { quantity: 'Bold text column', particular: 'Regular text column', 'subamount': 'Regular text column', 'totalamount': 'Regular text column' },
+                            { quantity: 'Bold text column', particular: 'Regular text column', 'subamount': 'Regular text column', 'totalamount': 'Regular text column' },
+                            { quantity: 'Bold text column', particular: 'Regular text column', 'subamount': 'Regular text column', 'totalamount': 'Regular text column' },
+                            { quantity: 'Bold text column', particular: 'Regular text column', 'subamount': 'Regular text column', 'totalamount': 'Regular text column' },
+                            { quantity: 'Bold text column', particular: 'Regular text column', 'subamount': 'Regular text column', 'totalamount': 'Regular text column' },
+                            { quantity: 'Bold text column', particular: 'Regular text column', 'subamount': 'Regular text column', 'totalamount': 'Regular text column' }
+                        ]}" class="max-w-screen-xl mx-auto w-full">
+                        
+                        <div class="mt-3 shadow-sm border rounded-lg overflow-x-auto">
+                            <table class="w-full table-auto text-sm text-left">
+                                <thead class="bg-gray-50 text-gray-600 font-medium border-b">
+                                    <tr>
+                                    <th class="py-3 px-6">Quantity</th>
+                                    <th class="py-3 px-6">Particular</th>
+                                    <th class="py-3 px-6">Sub Amount</th>
+                                    <th class="py-3 px-6">Total Amount</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-gray-600 divide-y">
+                                    <template x-for="(item, idx) in tableItems" :key="idx">
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap max-w-[100px] overflow-ellipsis font-semibold" x-text="item.quantity"></td>
+                                        <td class="px-6 py-4 whitespace-nowrap max-w-[100px] overflow-ellipsis" x-text="item.particular"></td>
+                                        <td class="px-6 py-4 whitespace-nowrap max-w-[100px] overflow-ellipsis" x-text="item.subamount"></td>
+                                        <td class="px-6 py-4 whitespace-nowrap max-w-[100px] overflow-ellipsis" x-text="item.totalamount"></td>
+                                    </tr>
+                                    </template>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payable View Section -->
+                <div class="lg:w-1/3 md:w-1/2 bg-white rounded-lg flex flex-col md:ml-auto md:py-8 mt-8 md:mt-0" style="align-self: flex-start; margin-top: 0; padding-top: 0;">
+                    <div class="flex items-center justify-between">
+                        <div class="text-zinc-950 text-lg font-semibold font-['Inter'] leading-loose">Payable Preview</div>
+                    </div>
+                    <div class="mt-3 border shadow h-96">
+                        <!-- file preview -->
+                    </div>
                 </div>
             </div>
         </div>

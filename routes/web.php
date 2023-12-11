@@ -39,7 +39,11 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/payables/view', function () {
         return view('payables-view');
-    })->name('payables-view');  
+    })->name('payables-view'); 
+    
+    Route::get('/payables/add', function () {
+        return view('payables-add');
+    })->name('payables-add');
 
     Route::get('/tracking', function () {
         return view('tracking');
