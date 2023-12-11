@@ -153,7 +153,7 @@
             </a>
 
             <!-- Notifications Section -->
-            <button class="w-full px-4 py-2 flex items-center rounded-md hover:text-[#EFF0FF] hover:bg-[#2C56A6] active:bg-[#2D6B9A] active:text-[#EFF0FF]">
+            <a href="{{ route('notifications') }}" class="w-full px-4 py-2 flex items-center rounded-md hover:text-[#EFF0FF] hover:bg-[#2C56A6] active:bg-[#2D6B9A] active:text-[#EFF0FF]">
                 <div class="w-8 h-8 rounded-md shadow justify-center items-center flex">
                     <div class="w-5 h-5 relative">
                         <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
@@ -162,7 +162,7 @@
                     </div>
                 </div>
                 <div class="text-white text-l font-normal font-sans leading-7 ml-3">Notifications</div>
-            </button>
+            </a>
 
             <!-- Folders Section -->
             <button class="w-full px-4 py-2 flex items-center rounded-md hover:text-[#EFF0FF] hover:bg-[#2C56A6] active:bg-[#2D6B9A] active:text-[#EFF0FF]">

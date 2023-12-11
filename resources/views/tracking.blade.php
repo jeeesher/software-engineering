@@ -236,19 +236,14 @@
                                                 </div>
 
                                                 <hr class="border-gray-200 dark:border-gray-700 ">
-                                                <!-- Edit Payable Button -->    
+                                                <!-- Edit Track Button -->    
                                                 <x-dropdown-link :href="route('payables-edit')" class="hover:text-[#EFF0FF] hover:bg-[#2C56A6] active:bg-[#4F74BB] active:text-[#EFF0FF] rounded-md">
-                                                    {{ __('Edit') }}
+                                                    {{ __('Edit Track') }}
                                                 </x-dropdown-link>
 
-                                                <!-- View Payable Button -->    
+                                                <!-- View Track Button -->    
                                                 <x-dropdown-link :href="route('payables-view')" class="hover:text-[#EFF0FF] hover:bg-[#2C56A6] active:bg-[#4F74BB] active:text-[#EFF0FF] rounded-md">
-                                                    {{ __('View') }}
-                                                </x-dropdown-link>
-
-                                                <!-- Track Payable Button -->    
-                                                <x-dropdown-link :href="route('profile.edit')" class="hover:text-[#EFF0FF] hover:bg-[#2C56A6] active:bg-[#4F74BB] active:text-[#EFF0FF] rounded-md">
-                                                    {{ __('Track') }}
+                                                    {{ __('View Track') }}
                                                 </x-dropdown-link>
                                             </x-slot>
                                         </x-dropdown>

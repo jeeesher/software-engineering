@@ -230,23 +230,25 @@
                 </div>
 
                 <!-- Add Payable Button -->
-                <div class="mt-1">
-                    <x-primary-button class="flex items-center px-3 py-2 bg-[#2D349A] rounded-md shadow justify-center gap-2 ml-6">
-                        <div class="w-4 h-4 relative">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
-                                <g clip-path="url(#clip0_3143_9012)">
-                                    <path d="M2.66667 15.2335H12C12.3536 15.2335 12.6928 15.093 12.9428 14.843C13.1929 14.5929 13.3333 14.2538 13.3333 13.9001V5.56681L9.66667 1.90015H4C3.64638 1.90015 3.30724 2.04062 3.05719 2.29067C2.80714 2.54072 2.66667 2.87986 2.66667 3.23348V5.90015M9.33333 1.90015V5.90015H13.3333M2 10.5668H6M4 8.56681V12.5668" stroke="#FAFAFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_3143_9012">
-                                    <rect width="16" height="16" fill="white" transform="translate(0 0.566772)"/>
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                        </div>
-                        <div class="text-white text-sm font-medium font-['Inter'] leading-tight">Add Payable</div>
-                    </x-primary-button>
-                </div>
+                <a href="{{ route('payables-view') }}">
+                    <div class="mt-1">
+                        <x-primary-button class="flex items-center px-3 py-2 bg-[#2D349A] rounded-md shadow justify-center gap-2 ml-6">
+                            <div class="w-4 h-4 relative">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                                    <g clip-path="url(#clip0_3143_9012)">
+                                        <path d="M2.66667 15.2335H12C12.3536 15.2335 12.6928 15.093 12.9428 14.843C13.1929 14.5929 13.3333 14.2538 13.3333 13.9001V5.56681L9.66667 1.90015H4C3.64638 1.90015 3.30724 2.04062 3.05719 2.29067C2.80714 2.54072 2.66667 2.87986 2.66667 3.23348V5.90015M9.33333 1.90015V5.90015H13.3333M2 10.5668H6M4 8.56681V12.5668" stroke="#FAFAFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_3143_9012">
+                                        <rect width="16" height="16" fill="white" transform="translate(0 0.566772)"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <div class="text-white text-sm font-medium font-['Inter'] leading-tight">Add Payable</div>
+                        </x-primary-button>
+                    </div>
+                </a>
             </div>
         </div>
     </div>

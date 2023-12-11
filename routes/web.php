@@ -48,6 +48,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/tracking', function () {
         return view('tracking');
     })->name('tracking');
+
+    Route::get('/notifications', function () {
+        return view('notifications');
+    })->name('notifications');
 });   
 
 
