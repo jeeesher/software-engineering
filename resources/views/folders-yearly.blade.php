@@ -115,28 +115,28 @@
         <div class="text-black text-base font-medium font-['Inter'] leading-normal">BUR Number</div>
     </div>
 
-    <div class="left-[500px] absolute w-150 h-28 justify-start items-start gap-12 inline-flex flex">
+    <div class="left-[400px] absolute w-150 h-28 justify-start items-start gap-12 inline-flex flex">
         <div class="w-40 h-28 relative">
-            <div class="left-0 top-[90.93px] absolute text-gray-500 text-xs font-medium font-['Inter'] leading-none">Accounts Payable_Year</div>
-            <div class="w-24 h-24 left-[17.31px] top-0 absolute">
-            <div class="left-0 top-[57.63px] absolute text-neutral-700 text-xs font-medium font-['Inter'] leading-tight">PDF File Name</div>
-            <img class="w-11 h-11 left-[19.50px] top-0 absolute" src="{{ asset('css/images/PDF.png') }}" />
+            <div class="left-0 top-[90.93px] absolute text-gray-500 text-xs font-medium font-['Inter'] leading-none">PDF File Name</div>
+                <img class="w-11 h-11 left-[19.50px] top-0 absolute" src="{{ asset('css/images/PDF.png') }}" />
         </div>
-        <div class="w-24 h-20 relative">
-            <div class="left-0 top-[57.63px] absolute text-neutral-700 text-xs font-medium font-['Inter'] leading-tight">Word File Name</div>
+        
+        <div class="w-40 h-28 relative">
+            <div class="left-0 top-[90.93px] absolute text-gray-500 text-xs font-medium font-['Inter'] leading-none">Word File Name</div>
             <img class="w-11 h-11 left-[16.50px] top-0 absolute" src="{{ asset('css/images/Microsoft Word.png') }}"/>
         </div>
-        <div class="w-24 h-20 relative">
-            <div class="left-0 top-[57.63px] absolute text-neutral-700 text-xs font-medium font-['Inter'] leading-tight">Excel File Name</div>
+        <div class="w-40 h-28 relative">
+            <div class="left-0 top-[90.93px] absolute text-gray-500 text-xs font-medium font-['Inter'] leading-none">Excel File Name</div>
             <img class="w-11 h-11 left-[20.81px] top-0 absolute" src="{{ asset('css/images/Microsoft Excel.png') }}" />
         </div>
-        <div class="w-28 h-20 relative">
-            <div class="left-0 top-[57.63px] absolute text-neutral-700 text-xs font-medium font-['Inter'] leading-tight">Document File Name</div>
+        <div class="w-40 h-28 relative">
+            <div class="left-0 top-[90.93px] absolute text-gray-500 text-xs font-medium font-['Inter'] leading-none">Document File Name</div>
             <img class="w-11 h-11 left-[28.08px] top-0 absolute" src="{{ asset('css/images/Document.png') }}" />
         </div>
-        <div class="w-24 h-20 relative">
-            <div class="left-0 top-[57.63px] absolute text-neutral-700 text-xs font-medium font-['Inter'] leading-tight">Image File Name</div>
+        <div class="w-40 h-28 relative">
+            <div class="left-0 top-[90.93px] absolute text-gray-500 text-xs font-medium font-['Inter'] leading-none">Image File Name</div>
             <img class="w-11 h-11 left-[20.38px] top-0 absolute" src="{{ asset('css/images/Image.png') }}" />
         </div>
+    </div>
     </div>
 </x-app-layout>

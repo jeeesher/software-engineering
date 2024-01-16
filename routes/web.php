@@ -49,9 +49,25 @@ Route::middleware('auth')->group(function () {
         return view('tracking');
     })->name('tracking');
 
+    Route::get('/tracking/view', function () {
+        return view('tracking-view');
+    })->name('tracking-view');
+
     Route::get('/notifications', function () {
         return view('notifications');
     })->name('notifications');
+
+    Route::get('/folders', function () {
+        return view('folders');
+    })->name('folders');
+
+    Route::get('/folders/opened', function () {
+        return view('folders-opened');
+    })->name('folders-opened');
+
+    Route::get('/folders/yearly', function () {
+        return view('folders-yearly');
+    })->name('folders-yearly');
 });   
 
 

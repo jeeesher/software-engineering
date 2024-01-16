@@ -242,7 +242,7 @@
                                                 </x-dropdown-link>
 
                                                 <!-- View Track Button -->    
-                                                <x-dropdown-link :href="route('payables-view')" class="hover:text-[#EFF0FF] hover:bg-[#2C56A6] active:bg-[#4F74BB] active:text-[#EFF0FF] rounded-md">
+                                                <x-dropdown-link :href="route('tracking-view')" class="hover:text-[#EFF0FF] hover:bg-[#2C56A6] active:bg-[#4F74BB] active:text-[#EFF0FF] rounded-md">
                                                     {{ __('View Track') }}
                                                 </x-dropdown-link>
                                             </x-slot>

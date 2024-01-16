@@ -1,10 +1,50 @@
 <x-app-layout>
-    <x-slot name="header" class="bg-white flex item-center justify-between">
-        <h2 class="font-semibold text-3xl text-black dark:text-gray-200 leading-tight ml-60" style="padding-top: 4rem;">
+    <x-slot name="header" class="flex item-center justify-between">
+        <h2 class="font-semibold text-3xl text-black dark:text-gray-200 leading-tight ml-60 flex" style="padding-top: 4rem;">
             {{ __('Folders') }}
 
-           <!-- Delete Button -->
-           <x-secondary-button class="bg-white border border-zinc-200 gap-2 ml-6">
+            <div class="flex items-center ml-auto justify-end">
+                <!-- Script for the Dropdowns -->
+                <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        const dropdowns = document.querySelectorAll('.custom-dropdown');
+
+                        dropdowns.forEach(dropdown => {
+                            const button = dropdown.querySelector('button');
+                            const content = dropdown.querySelector('.custom-dropdown-content');
+                            const options = content.querySelectorAll('.custom-option');
+
+                            button.addEventListener('click', function() {
+                                content.classList.toggle('show');
+                            });
+
+                            options.forEach(option => {
+                                option.addEventListener('click', function() {
+                                    const selectedValue = this.dataset.value;
+                                    button.querySelector('.text-zinc-950').innerText = selectedValue;
+                                    content.classList.remove('show');
+
+                                    // Remove 'clicked' class from all options
+                                    options.forEach(opt => {
+                                        opt.classList.remove('clicked');
+                                    });
+
+                                    // Add 'clicked' class to the selected option
+                                    this.classList.add('clicked');
+                                });
+                            });
+
+                            document.addEventListener('click', function(event) {
+                                if (!dropdown.contains(event.target)) {
+                                    content.classList.remove('show');
+                                }
+                            });
+                        });
+                    });
+                </script>
+
+                <!-- Delete Button -->
+                <x-secondary-button class="bg-white border border-zinc-200 gap-2 ml-6">
                     <div class="w-4 h-4 relative">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                             <path d="M2 3.99998H14M12.6667 3.99998V13.3333C12.6667 14 12 14.6666 11.3333 14.6666H4.66667C4 14.6666 3.33333 14 3.33333 13.3333V3.99998M5.33333 3.99998V2.66665C5.33333 1.99998 6 1.33331 6.66667 1.33331H9.33333C10 1.33331 10.6667 1.99998 10.6667 2.66665V3.99998M6.66667 7.33331V11.3333M9.33333 7.33331V11.3333" stroke="#18181B" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"/>
@@ -12,9 +52,9 @@
                     </div>
                     <div class="text-zinc-950 text-sm font-medium font-['Inter'] leading-tight">Delete</div>
                 </x-secondary-button>
-
-        <!-- Export Dropdown -->
-        <div class="hidden sm:flex sm:items-center sm:ms-6 relative">
+    
+                <!-- Export Dropdown -->
+                <div class="hidden sm:flex sm:items-center sm:ms-6 relative">
                     <div class="custom-dropdown inline-flex items-center relative">
                         <x-secondary-button class="bg-white shadow border border-zinc-200 gap-2">
                             <div class="w-4 h-4 relative">
@@ -31,8 +71,8 @@
                             </div>
 
                             <hr class="border-gray-200 dark:border-gray-700 ">
-                            
-                            <div class="custom-option" data-value="Export">
+                                
+                            <div class="custom-option my-4" data-value="Export">
                                 <div class="option-content justify-between">
                                     <div class="text">Excel</div>
                                     <div class="svg-icon">
@@ -42,7 +82,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="custom-option" data-value="Export">
+                            <div class="custom-option my-4" data-value="Export">
                                 <div class="option-content justify-between">
                                     <div class="text">Pdf</div>
                                     <div class="svg-icon">
@@ -54,10 +94,9 @@
                             </div>
                         </div>
                     </div>
-                </div>                    
-
-                <!-- Add New Payable Button -->
-                <a href="{{ route('payables-add') }}">
+                </div>   
+                    
+                <!-- Add New Folder Button -->
                     <x-primary-button class="flex items-center px-3 py-2 bg-[#2D349A] rounded-md shadow justify-center gap-2 ml-6">
                         <div class="w-4 h-4 relative">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -66,11 +105,11 @@
                         </div>
                         <div class="text-white text-sm font-medium font-['Inter'] leading-tight">Add New Folder</div>
                     </x-primary-button>
-                </a>
-    </h2>
+            </div>                
+        </h2>
     </x-slot>
 
-    <div class="left-[500px] absolute w-150 h-28 justify-start items-start gap-12 inline-flex">
+    <div class="left-[310px] absolute w-150 h-28 justify-start items-start gap-12 inline-flex">
         <div class="w-40 h-28 relative">
             <div class="left-0 top-[90.93px] absolute text-gray-500 text-xs font-medium font-['Inter'] leading-none">Accounts Payable_Year</div>
             <div class="w-24 h-24 left-[17.31px] top-0 absolute">

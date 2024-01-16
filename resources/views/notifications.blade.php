@@ -22,7 +22,7 @@
 
             <div class="p-2 sm:p-5 bg-white">
                 <div class="inline-flex gap-4">
-                    <div class="text-black text-lg font-semibold leading-tight">Today</div>
+                    <div class="text-black text-lg font-semibold leading-tight"></div>
                 </div>
             </div>
         </div>

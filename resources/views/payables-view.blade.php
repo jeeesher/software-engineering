@@ -166,7 +166,7 @@
                 <div class="flex flex-wrap w-full mx-auto">
                     <!-- BUR Number and Total Amount Information -->
                     <div class="pr-4 lg:w-1/3">
-                        <div class="h-full pt-3 pb-2 rounded-lg text-left relative">
+                        <div class="h-full pt-3 pb-2 text-left relative">
                             <div class="justify-start items-center gap-0.5 flex pb-2">
                                 <div class="text-zinc-950 text-sm font-medium font-['Inter'] leading-tight">BUR Number</div>
                             </div>

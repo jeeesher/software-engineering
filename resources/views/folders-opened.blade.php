@@ -130,12 +130,12 @@
 
                                     <hr class="border-gray-200 dark:border-gray-700 ">
                                     <!-- View Payable Button -->    
-                                    <x-dropdown-link :href="route('payables-view')" class="hover:text-[#EFF0FF] hover:bg-[#2C56A6] active:bg-[#4F74BB] active:text-[#EFF0FF] rounded-md">
+                                    <x-dropdown-link :href="route('folders-yearly')" class="hover:text-[#EFF0FF] hover:bg-[#2C56A6] active:bg-[#4F74BB] active:text-[#EFF0FF] rounded-md">
                                         {{ __('View') }}
                                     </x-dropdown-link>
 
-                                     <!-- Delete Payable Button -->    
-                                     <x-dropdown-link :href="route('payables-edit')" class="hover:text-[#EFF0FF] hover:bg-[#2C56A6] active:bg-[#4F74BB] active:text-[#EFF0FF] rounded-md">
+                                    <!-- Delete Payable Button -->    
+                                    <x-dropdown-link :href="route('folders-yearly')" class="hover:text-[#EFF0FF] hover:bg-[#2C56A6] active:bg-[#4F74BB] active:text-[#EFF0FF] rounded-md">
                                         {{ __('Delete') }}
                                     </x-dropdown-link>
                                 </x-slot>

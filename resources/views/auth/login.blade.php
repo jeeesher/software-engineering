@@ -58,9 +58,9 @@
                 </div>
 
                 <!--Login Button-->
-                <div class="w-96 h-11 px-5 py-2.5 bg-[#2D349A] rounded shadow justify-center items-center inline-flex hover:bg-[#2C56A6]">
-                    <button type="submit" class="text-white text-xl font-bold font-['Inter'] leading-normal">Login</button>
-                </div>
+                <button type="submit" class="w-96 h-11 px-5 py-2.5 bg-[#2D349A] rounded shadow justify-center items-center inline-flex hover:bg-[#2C56A6] text-white text-xl font-bold font-['Inter'] leading-normal">
+                    Login
+                </button>
             </div>
         </form>
     </div>
