@@ -129,7 +129,7 @@
     </x-slot>
 
     <div class="py-2 ml-64 pb-5">
-        <div class="max-w-10xl mx-auto sm:px-6 lg:px-8 space-y-6 ml-5 flex">
+        <div class="max-w-10xl mx-auto sm:px-6 lg:px-8 space-y-6 ml-5 flex mb-10">
             <!-- Payable Information Input Field -->
             <div class="bg-white dark:bg-gray-800 sm:rounded-lg lg:max-w-lg lg:w-1/3 md:w-1/2 w-full mb-10 md:mb-0">
                 <div class="text-zinc-950 text-lg font-semibold font-['Inter'] leading-loose">Payable Information</div>
@@ -143,28 +143,11 @@
                     <div class="flex items-center">
                         <x-text-input id="BUR" name="BUR" type="text" class="mt-1 block w-full text-black text-sm" required autofocus autocomplete="name" placeholder="Enter BUR Number"/>
                         <x-input-error class="mt-2" :messages="$errors->get('BUR')" />
-                        <div class="ml-4">
+                        <button class="ml-4">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                 <path d="M8 13.3334H14M11 2.3334C11.2652 2.06819 11.6249 1.91919 12 1.91919C12.1857 1.91919 12.3696 1.95577 12.5412 2.02684C12.7128 2.09791 12.8687 2.20208 13 2.3334C13.1313 2.46472 13.2355 2.62063 13.3066 2.79221C13.3776 2.96379 13.4142 3.14769 13.4142 3.3334C13.4142 3.51912 13.3776 3.70302 13.3066 3.8746C13.2355 4.04618 13.1313 4.20208 13 4.3334L4.66667 12.6667L2 13.3334L2.66667 10.6667L11 2.3334Z" stroke="#2563EB" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
-                        </div>
-                    </div>            
-                </div>
-
-                <!-- Supplier Input Field -->
-                <div class="mt-4">
-                    <div class="flex items-center">
-                        <x-input-label for="supplier" :value="__('Supplier')" class="font-medium text-sm text-zinc-950"/>
-                        <span class="text-red-500 p-1">*</span>
-                    </div>
-                    <div class="flex items-center">
-                        <x-text-input id="supplier" name="supplier" type="text" class="mt-1 block w-full text-black text-sm" required autofocus autocomplete="name" placeholder="Enter Supplier"/>
-                        <x-input-error class="mt-2" :messages="$errors->get('supplier')" />
-                        <div class="ml-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <path d="M8 13.3334H14M11 2.3334C11.2652 2.06819 11.6249 1.91919 12 1.91919C12.1857 1.91919 12.3696 1.95577 12.5412 2.02684C12.7128 2.09791 12.8687 2.20208 13 2.3334C13.1313 2.46472 13.2355 2.62063 13.3066 2.79221C13.3776 2.96379 13.4142 3.14769 13.4142 3.3334C13.4142 3.51912 13.3776 3.70302 13.3066 3.8746C13.2355 4.04618 13.1313 4.20208 13 4.3334L4.66667 12.6667L2 13.3334L2.66667 10.6667L11 2.3334Z" stroke="#2563EB" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
+                        </button>
                     </div>            
                 </div>
 
@@ -177,11 +160,11 @@
                     <div class="flex items-center">
                         <x-text-input id="enduser" name="enduser" type="text" class="mt-1 block w-full text-black text-sm" required autofocus autocomplete="name" placeholder="Enter End-user"/>
                         <x-input-error class="mt-2" :messages="$errors->get('enduser')" />
-                        <div class="ml-4">
+                        <button class="ml-4">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                 <path d="M8 13.3334H14M11 2.3334C11.2652 2.06819 11.6249 1.91919 12 1.91919C12.1857 1.91919 12.3696 1.95577 12.5412 2.02684C12.7128 2.09791 12.8687 2.20208 13 2.3334C13.1313 2.46472 13.2355 2.62063 13.3066 2.79221C13.3776 2.96379 13.4142 3.14769 13.4142 3.3334C13.4142 3.51912 13.3776 3.70302 13.3066 3.8746C13.2355 4.04618 13.1313 4.20208 13 4.3334L4.66667 12.6667L2 13.3334L2.66667 10.6667L11 2.3334Z" stroke="#2563EB" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
-                        </div>
+                        </button>
                     </div>            
                 </div>
 
@@ -194,11 +177,11 @@
                     <div class="flex items-center">
                         <x-text-input id="amount" name="amount" type="text" class="mt-1 block w-full text-black text-sm" required autofocus autocomplete="name" placeholder="Php 0.00"/>
                         <x-input-error class="mt-2" :messages="$errors->get('amount')" />
-                        <div class="ml-4">
+                        <button class="ml-4">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                 <path d="M8 13.3334H14M11 2.3334C11.2652 2.06819 11.6249 1.91919 12 1.91919C12.1857 1.91919 12.3696 1.95577 12.5412 2.02684C12.7128 2.09791 12.8687 2.20208 13 2.3334C13.1313 2.46472 13.2355 2.62063 13.3066 2.79221C13.3776 2.96379 13.4142 3.14769 13.4142 3.3334C13.4142 3.51912 13.3776 3.70302 13.3066 3.8746C13.2355 4.04618 13.1313 4.20208 13 4.3334L4.66667 12.6667L2 13.3334L2.66667 10.6667L11 2.3334Z" stroke="#2563EB" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
-                        </div>
+                        </button>
                     </div>            
                 </div>
 
@@ -211,11 +194,11 @@
                     <div class="flex items-center">
                         <x-text-input id="location" name="location" type="text" class="mt-1 block w-full text-black text-sm" required autofocus autocomplete="name" placeholder="Select Location"/>
                         <x-input-error class="mt-2" :messages="$errors->get('location')" />
-                        <div class="ml-4">
+                        <button class="ml-4">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                 <path d="M8 13.3334H14M11 2.3334C11.2652 2.06819 11.6249 1.91919 12 1.91919C12.1857 1.91919 12.3696 1.95577 12.5412 2.02684C12.7128 2.09791 12.8687 2.20208 13 2.3334C13.1313 2.46472 13.2355 2.62063 13.3066 2.79221C13.3776 2.96379 13.4142 3.14769 13.4142 3.3334C13.4142 3.51912 13.3776 3.70302 13.3066 3.8746C13.2355 4.04618 13.1313 4.20208 13 4.3334L4.66667 12.6667L2 13.3334L2.66667 10.6667L11 2.3334Z" stroke="#2563EB" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
-                        </div>
+                        </button>
                     </div>            
                 </div>
 
@@ -228,56 +211,94 @@
                     <div class="flex items-center">
                         <x-text-input id="remarks" name="remarks" type="text" class="mt-1 block w-full text-black text-sm" required autofocus autocomplete="name" placeholder="Enter Remarks"/>
                         <x-input-error class="mt-2" :messages="$errors->get('remarks')" />
-                        <div class="ml-4">
+                        <button class="ml-4">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                 <path d="M8 13.3334H14M11 2.3334C11.2652 2.06819 11.6249 1.91919 12 1.91919C12.1857 1.91919 12.3696 1.95577 12.5412 2.02684C12.7128 2.09791 12.8687 2.20208 13 2.3334C13.1313 2.46472 13.2355 2.62063 13.3066 2.79221C13.3776 2.96379 13.4142 3.14769 13.4142 3.3334C13.4142 3.51912 13.3776 3.70302 13.3066 3.8746C13.2355 4.04618 13.1313 4.20208 13 4.3334L4.66667 12.6667L2 13.3334L2.66667 10.6667L11 2.3334Z" stroke="#2563EB" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
-                        </div>
+                        </button>
                     </div>            
+                </div>
+            
+            <!-- Supplier Information Input Field -->
+            <div>
+                <div class="text-zinc-950 text-lg font-semibold font-['Inter'] leading-loose mt-6">Supplier Information</div>
+
+                    <!-- Supplier Name Input Field -->
+                    <div class="mt-1 pr-1">
+                        <div class="flex items-center">
+                            <x-input-label for="Supplier" :value="__('Supplier Name')" class="font-medium text-sm text-zinc-950"/>
+                            <span class="text-red-500 p-1">*</span>
+                        </div>
+                        <div class="flex items-center">
+                            <x-text-input id="Supplier" name="Supplier" type="text" class="mt-1 block w-full text-black text-sm" required autofocus autocomplete="name" placeholder="Select Supplier Name"/>
+                            <x-input-error class="mt-2" :messages="$errors->get('Supplier')" />
+                            <button class="ml-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M8 13.3334H14M11 2.3334C11.2652 2.06819 11.6249 1.91919 12 1.91919C12.1857 1.91919 12.3696 1.95577 12.5412 2.02684C12.7128 2.09791 12.8687 2.20208 13 2.3334C13.1313 2.46472 13.2355 2.62063 13.3066 2.79221C13.3776 2.96379 13.4142 3.14769 13.4142 3.3334C13.4142 3.51912 13.3776 3.70302 13.3066 3.8746C13.2355 4.04618 13.1313 4.20208 13 4.3334L4.66667 12.6667L2 13.3334L2.66667 10.6667L11 2.3334Z" stroke="#2563EB" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>            
+                    </div>
+
+                    <!-- Supplier Address Input Field -->
+                    <div class="mt-4 pr-1">
+                        <div class="flex items-center">
+                            <x-input-label for="Supplier Address" :value="__('Supplier Address')" class="font-medium text-sm text-zinc-950"/>                        <span class="text-red-500 p-1">*</span>
+                        </div>
+                        <div class="flex items-center">
+                            <x-text-input id="Supplier Address" name="Supplier Address" type="text" class="mt-1 block w-full text-black text-sm mr-8" required autofocus autocomplete="name" placeholder="Autofill Text"/>
+                            <x-input-error class="mt-2" :messages="$errors->get('Supplier Address')" />
+                        </div>            
+                    </div>
+
+                    <!-- Supplier Contact Number Input Field -->
+                    <div class="mt-4 pr-1">
+                        <div class="flex items-center">
+                            <x-input-label for="Supplier Contact" :value="__('Supplier Contact Number')" class="font-medium text-sm text-zinc-950"/>
+                            <span class="text-red-500 p-1">*</span>
+                        </div>
+                        <div class="flex items-center">
+                            <x-text-input id="Supplier Contact" name="Supplier Contact" type="text" class="mt-1 block w-full text-black text-sm mr-8" required autofocus autocomplete="name" placeholder="Autofill Text"/>
+                            <x-input-error class="mt-2" :messages="$errors->get('Supplier Contact')" />
+                        </div>            
+                    </div>
                 </div>
             </div>
 
-            
             <div class="bg-white dark:bg-gray-800 sm:rounded-lg flex flex-col flex-grow lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center" style="align-self: flex-start; margin-top: 0; padding-top: 0;">
                 <!-- Particular Input Field -->
                 <div>
                     <div class="flex items-center">
                         <div class="text-zinc-950 text-lg font-semibold font-['Inter'] leading-loose">Particular</div>
-                        <div class="ml-4">
+                        <button class="ml-4">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                 <path d="M8 13.3334H14M11 2.3334C11.2652 2.06819 11.6249 1.91919 12 1.91919C12.1857 1.91919 12.3696 1.95577 12.5412 2.02684C12.7128 2.09791 12.8687 2.20208 13 2.3334C13.1313 2.46472 13.2355 2.62063 13.3066 2.79221C13.3776 2.96379 13.4142 3.14769 13.4142 3.3334C13.4142 3.51912 13.3776 3.70302 13.3066 3.8746C13.2355 4.04618 13.1313 4.20208 13 4.3334L4.66667 12.6667L2 13.3334L2.66667 10.6667L11 2.3334Z" stroke="#2563EB" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
-                        </div>
+                        </button>
                     </div>
 
                     <div x-data="{ 
                         tableItems: [
-                            { quantity: 'Bold text column', particular: 'Regular text column', 'subamount': 'Regular text column', 'totalamount': 'Regular text column' },
-                            { quantity: 'Bold text column', particular: 'Regular text column', 'subamount': 'Regular text column', 'totalamount': 'Regular text column' },
-                            { quantity: 'Bold text column', particular: 'Regular text column', 'subamount': 'Regular text column', 'totalamount': 'Regular text column' },
-                            { quantity: 'Bold text column', particular: 'Regular text column', 'subamount': 'Regular text column', 'totalamount': 'Regular text column' },
-                            { quantity: 'Bold text column', particular: 'Regular text column', 'subamount': 'Regular text column', 'totalamount': 'Regular text column' },
-                            { quantity: 'Bold text column', particular: 'Regular text column', 'subamount': 'Regular text column', 'totalamount': 'Regular text column' },
-                            { quantity: 'Bold text column', particular: 'Regular text column', 'subamount': 'Regular text column', 'totalamount': 'Regular text column' }
+                            { particular: 'Bold text column', 'amount': 'Regular text column' },
+                            { particular: 'Bold text column', 'amount': 'Regular text column' },
+                            { particular: 'Bold text column', 'amount': 'Regular text column' },
+                            { particular: 'Bold text column', 'amount': 'Regular text column' },
+                            { particular: 'Bold text column', 'amount': 'Regular text column' },
                         ]}" class="max-w-screen-xl mx-auto w-full">
                         
-                        <div class="mt-3 shadow-sm border rounded-lg overflow-x-auto">
+                        <div class="mt-3 rounded-md overflow-x-auto">
                             <table class="w-full table-auto text-sm text-left">
                                 <thead class="bg-gray-50 text-gray-600 font-medium border-b">
                                     <tr>
-                                    <th class="py-3 px-6">Quantity</th>
                                     <th class="py-3 px-6">Particular</th>
-                                    <th class="py-3 px-6">Sub Amount</th>
-                                    <th class="py-3 px-6">Total Amount</th>
+                                    <th class="py-3 px-6">Amount</th>
                                     </tr>
                                 </thead>
                                 <tbody class="text-gray-600 divide-y">
                                     <template x-for="(item, idx) in tableItems" :key="idx">
                                     <tr>
-                                        <td class="px-6 py-4 whitespace-nowrap max-w-[100px] overflow-ellipsis font-semibold" x-text="item.quantity"></td>
-                                        <td class="px-6 py-4 whitespace-nowrap max-w-[100px] overflow-ellipsis" x-text="item.particular"></td>
-                                        <td class="px-6 py-4 whitespace-nowrap max-w-[100px] overflow-ellipsis" x-text="item.subamount"></td>
-                                        <td class="px-6 py-4 whitespace-nowrap max-w-[100px] overflow-ellipsis" x-text="item.totalamount"></td>
+                                        <td class="px-6 py-4 whitespace-nowrap max-w-[100px] overflow-ellipsis font-semibold" x-text="item.particular"></td>
+                                        <td class="px-6 py-4 whitespace-nowrap max-w-[100px] overflow-ellipsis" x-text="item.amount"></td>
                                     </tr>
                                     </template>
                                 </tbody>

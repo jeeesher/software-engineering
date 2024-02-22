@@ -164,34 +164,11 @@
             <div class="bg-white dark:bg-gray-800 sm:rounded-lg">
                 <div class="text-zinc-950 text-lg font-semibold font-['Inter'] leading-loose">Payable Information</div>
                 <div class="flex flex-wrap w-full mx-auto">
-                    <!-- BUR Number and Total Amount Information -->
+                    <!-- BUR Number and Current Location Information -->
                     <div class="pr-4 lg:w-1/3">
                         <div class="h-full pt-3 pb-2 text-left relative">
                             <div class="justify-start items-center gap-0.5 flex pb-2">
                                 <div class="text-zinc-950 text-sm font-medium font-['Inter'] leading-tight">BUR Number</div>
-                            </div>
-                            <div class="w-96 h-9 px-3 py-2 bg-white rounded-md shadow border border-gray-200 justify-start items-center gap-2 inline-flex">
-                                <div class="grow shrink basis-0 h-5 justify-start items-center gap-2 flex">
-                                    <div class="grow shrink basis-0 text-zinc-500 text-sm font-normal font-['Inter'] leading-tight">Text</div>
-                                </div>
-                            </div>
-
-                            <div class="justify-start items-center gap-0.5 flex pb-2 pt-6">
-                                <div class="text-zinc-950 text-sm font-medium font-['Inter'] leading-tight">Total Amount</div>
-                            </div>
-                            <div class="w-96 h-9 px-3 py-2 bg-white rounded-md shadow border border-gray-200 justify-start items-center gap-2 inline-flex">
-                                <div class="grow shrink basis-0 h-5 justify-start items-center gap-2 flex">
-                                    <div class="grow shrink basis-0 text-zinc-500 text-sm font-normal font-['Inter'] leading-tight">Text</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Supplier and Current Location Information -->
-                    <div class="pr-4 lg:w-1/3">
-                        <div class="h-full pt-3 pb-2 pl-2 rounded-lg text-left relative">
-                            <div class="justify-start items-center gap-0.5 flex pb-2">
-                                <div class="text-zinc-950 text-sm font-medium font-['Inter'] leading-tight">Supplier</div>
                             </div>
                             <div class="w-96 h-9 px-3 py-2 bg-white rounded-md shadow border border-gray-200 justify-start items-center gap-2 inline-flex">
                                 <div class="grow shrink basis-0 h-5 justify-start items-center gap-2 flex">
@@ -212,7 +189,7 @@
 
                     <!-- End-user and Remarks Information -->
                     <div class="pr-4 lg:w-1/3">
-                        <div class="h-full pt-3 pl-4 pb-2 rounded-lg text-left relative">
+                        <div class="h-full pt-3 pb-2 pl-2 rounded-lg text-left relative">
                             <div class="justify-start items-center gap-0.5 flex pb-2">
                                 <div class="text-zinc-950 text-sm font-medium font-['Inter'] leading-tight">End-user</div>
                             </div>
@@ -224,6 +201,67 @@
 
                             <div class="justify-start items-center gap-0.5 flex pb-2 pt-6">
                                 <div class="text-zinc-950 text-sm font-medium font-['Inter'] leading-tight">Remarks</div>
+                            </div>
+                            <div class="w-96 h-9 px-3 py-2 bg-white rounded-md shadow border border-gray-200 justify-start items-center gap-2 inline-flex">
+                                <div class="grow shrink basis-0 h-5 justify-start items-center gap-2 flex">
+                                    <div class="grow shrink basis-0 text-zinc-500 text-sm font-normal font-['Inter'] leading-tight">Text</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Total Amount Information -->
+                    <div class="pr-4 lg:w-1/3">
+                        <div class="h-full pt-3 pl-4 pb-2 rounded-lg text-left relative">
+                            <div class="justify-start items-center gap-0.5 flex pb-2">
+                                <div class="text-zinc-950 text-sm font-medium font-['Inter'] leading-tight">Total Amount</div>
+                            </div>
+                            <div class="w-96 h-9 px-3 py-2 bg-white rounded-md shadow border border-gray-200 justify-start items-center gap-2 inline-flex">
+                                <div class="grow shrink basis-0 h-5 justify-start items-center gap-2 flex">
+                                    <div class="grow shrink basis-0 text-zinc-500 text-sm font-normal font-['Inter'] leading-tight">Text</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Supplier Information Section -->
+            <div class="bg-white dark:bg-gray-800 sm:rounded-lg">
+                <div class="text-zinc-950 text-lg font-semibold font-['Inter'] leading-loose">Supplier Information</div>
+                <div class="flex flex-wrap w-full mx-auto">
+                    <!-- Supplier Name Information -->
+                    <div class="pr-4 lg:w-1/3">
+                        <div class="h-full pt-3 pb-2 text-left relative">
+                            <div class="justify-start items-center gap-0.5 flex pb-2">
+                                <div class="text-zinc-950 text-sm font-medium font-['Inter'] leading-tight">Supplier Name</div>
+                            </div>
+                            <div class="w-96 h-9 px-3 py-2 bg-white rounded-md shadow border border-gray-200 justify-start items-center gap-2 inline-flex">
+                                <div class="grow shrink basis-0 h-5 justify-start items-center gap-2 flex">
+                                    <div class="grow shrink basis-0 text-zinc-500 text-sm font-normal font-['Inter'] leading-tight">Text</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Supplier Address Information -->
+                    <div class="pr-4 lg:w-1/3">
+                        <div class="h-full pt-3 pb-2 pl-2 rounded-lg text-left relative">
+                            <div class="justify-start items-center gap-0.5 flex pb-2">
+                                <div class="text-zinc-950 text-sm font-medium font-['Inter'] leading-tight">Supplier Address</div>
+                            </div>
+                            <div class="w-96 h-9 px-3 py-2 bg-white rounded-md shadow border border-gray-200 justify-start items-center gap-2 inline-flex">
+                                <div class="grow shrink basis-0 h-5 justify-start items-center gap-2 flex">
+                                    <div class="grow shrink basis-0 text-zinc-500 text-sm font-normal font-['Inter'] leading-tight">Text</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Supplier Contact Number Information -->
+                    <div class="pr-4 lg:w-1/3">
+                        <div class="h-full pt-3 pl-4 pb-2 rounded-lg text-left relative">
+                            <div class="justify-start items-center gap-0.5 flex pb-2">
+                                <div class="text-zinc-950 text-sm font-medium font-['Inter'] leading-tight">Supplier Contact Number</div>
                             </div>
                             <div class="w-96 h-9 px-3 py-2 bg-white rounded-md shadow border border-gray-200 justify-start items-center gap-2 inline-flex">
                                 <div class="grow shrink basis-0 h-5 justify-start items-center gap-2 flex">
@@ -246,39 +284,33 @@
             <!-- Particular and Payable View Section -->
             <div class="bg-white dark:bg-gray-800 sm:rounded-lg mx-auto flex sm:flex-nowrap flex-wrap">
                 <!-- Particular Section -->
-                <div class="lg:w-2/3 md:w-1/2 bg-white rounded-lg overflow-hidden sm:mr-10 w-full items-end justify-start relative">
+                <div class="lg:w-1/2 md:w-1/2 mb-10 bg-white rounded-lg overflow-hidden sm:mr-10 w-full items-end justify-start relative">
                     <div class="flex items-center">
                         <div class="text-zinc-950 text-lg font-semibold font-['Inter'] leading-loose">Particular</div>
                     </div>
 
                     <div x-data="{ 
                         tableItems: [
-                            { quantity: 'Bold text column', particular: 'Regular text column', 'subamount': 'Regular text column', 'totalamount': 'Regular text column' },
-                            { quantity: 'Bold text column', particular: 'Regular text column', 'subamount': 'Regular text column', 'totalamount': 'Regular text column' },
-                            { quantity: 'Bold text column', particular: 'Regular text column', 'subamount': 'Regular text column', 'totalamount': 'Regular text column' },
-                            { quantity: 'Bold text column', particular: 'Regular text column', 'subamount': 'Regular text column', 'totalamount': 'Regular text column' },
-                            { quantity: 'Bold text column', particular: 'Regular text column', 'subamount': 'Regular text column', 'totalamount': 'Regular text column' },
-                            { quantity: 'Bold text column', particular: 'Regular text column', 'subamount': 'Regular text column', 'totalamount': 'Regular text column' },
-                            { quantity: 'Bold text column', particular: 'Regular text column', 'subamount': 'Regular text column', 'totalamount': 'Regular text column' }
+                            { particular: 'Bold text column', 'amount': 'Regular text column' },
+                            { particular: 'Bold text column', 'amount': 'Regular text column' },
+                            { particular: 'Bold text column', 'amount': 'Regular text column' },
+                            { particular: 'Bold text column', 'amount': 'Regular text column' },
+                            { particular: 'Bold text column', 'amount': 'Regular text column' },
                         ]}" class="max-w-screen-xl mx-auto w-full">
                         
-                        <div class="mt-3 shadow-sm border rounded-lg overflow-x-auto">
+                        <div class="mt-3 rounded-md overflow-x-auto">
                             <table class="w-full table-auto text-sm text-left">
                                 <thead class="bg-gray-50 text-gray-600 font-medium border-b">
                                     <tr>
-                                    <th class="py-3 px-6">Quantity</th>
                                     <th class="py-3 px-6">Particular</th>
-                                    <th class="py-3 px-6">Sub Amount</th>
-                                    <th class="py-3 px-6">Total Amount</th>
+                                    <th class="py-3 px-6">Amount</th>
                                     </tr>
                                 </thead>
                                 <tbody class="text-gray-600 divide-y">
                                     <template x-for="(item, idx) in tableItems" :key="idx">
                                     <tr>
-                                        <td class="px-6 py-4 whitespace-nowrap max-w-[100px] overflow-ellipsis font-semibold" x-text="item.quantity"></td>
-                                        <td class="px-6 py-4 whitespace-nowrap max-w-[100px] overflow-ellipsis" x-text="item.particular"></td>
-                                        <td class="px-6 py-4 whitespace-nowrap max-w-[100px] overflow-ellipsis" x-text="item.subamount"></td>
-                                        <td class="px-6 py-4 whitespace-nowrap max-w-[100px] overflow-ellipsis" x-text="item.totalamount"></td>
+                                        <td class="px-6 py-4 whitespace-nowrap max-w-[100px] overflow-ellipsis font-semibold" x-text="item.particular"></td>
+                                        <td class="px-6 py-4 whitespace-nowrap max-w-[100px] overflow-ellipsis" x-text="item.amount"></td>
                                     </tr>
                                     </template>
                                 </tbody>
@@ -288,7 +320,7 @@
                 </div>
 
                 <!-- Payable View Section -->
-                <div class="lg:w-1/3 md:w-1/2 bg-white rounded-lg flex flex-col md:ml-auto md:py-8 mt-8 md:mt-0" style="align-self: flex-start; margin-top: 0; padding-top: 0;">
+                <div class="lg:w-1/2 md:w-1/2 mb-10 bg-white rounded-lg flex flex-col md:ml-auto md:py-8 mt-8 md:mt-0" style="align-self: flex-start; margin-top: 0; padding-top: 0;">
                     <div class="flex items-center justify-between">
                         <div class="text-zinc-950 text-lg font-semibold font-['Inter'] leading-loose">Payable Preview</div>
                     </div>
