@@ -129,25 +129,27 @@
             </svg>
             </div>
         </div>
-        <div class="w-40 h-28 relative">
-            <div class="left-0 top-[90.93px] absolute text-gray-500 text-xs font-medium font-['Inter'] leading-none">Accounts Payable_Year</div>
-            <div class="w-24 h-24 left-[17.31px] top-0 absolute">
-            <svg xmlns="http://www.w3.org/2000/svg" width="101" height="100" viewBox="0 0 101 100" fill="none">
-                <path d="M51.7883 21.6955L46.5049 16.4122C45.3341 15.2413 43.7445 14.583 42.0862 14.583H11.3424C9.04036 14.583 7.17578 16.4476 7.17578 18.7497V81.2497C7.17578 83.5518 9.04036 85.4163 11.3424 85.4163H90.5091C92.8112 85.4163 94.6758 83.5518 94.6758 81.2497V27.083C94.6758 24.7809 92.8112 22.9163 90.5091 22.9163H54.7341C53.6299 22.9163 52.5695 22.4768 51.7883 21.6955Z" fill="url(#paint0_linear_512_23528)"/>
-                <path d="M45.8966 30.0295L52.7049 23.2212C52.8987 23.0274 53.1633 22.917 53.4404 22.917H90.5091C92.8112 22.917 94.6758 24.7816 94.6758 27.0837V81.2503C94.6758 83.5524 92.8112 85.417 90.5091 85.417H11.3424C9.04036 85.417 7.17578 83.5524 7.17578 81.2503V32.292C7.17578 31.717 7.64245 31.2503 8.21745 31.2503H42.9508C44.0549 31.2503 45.1154 30.8107 45.8966 30.0295Z" fill="url(#paint1_linear_512_23528)"/>
-                <defs>
-                    <linearGradient id="paint0_linear_512_23528" x1="50.9258" y1="13.9747" x2="50.9258" y2="31.2018" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#EBA600"/>
-                    <stop offset="1" stop-color="#C28200"/>
-                    </linearGradient>
-                    <linearGradient id="paint1_linear_512_23528" x1="50.9258" y1="22.6128" x2="50.9258" y2="85.3816" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#FFD869"/>
-                    <stop offset="1" stop-color="#FEC52B"/>
-                    </linearGradient>
-                </defs>
-            </svg>
-            </div>
-        </div>
+        <a href="{{ route('folders-opened') }}" class="w-40 h-28 relative">
+            <button>
+                <div class="left-0 top-[90.93px] absolute text-gray-500 text-xs font-medium font-['Inter'] leading-none">Accounts Payable_Year</div>
+                <div class="w-24 h-24 left-[17.31px] top-0 absolute">
+                <svg xmlns="http://www.w3.org/2000/svg" width="101" height="100" viewBox="0 0 101 100" fill="none">
+                    <path d="M51.7883 21.6955L46.5049 16.4122C45.3341 15.2413 43.7445 14.583 42.0862 14.583H11.3424C9.04036 14.583 7.17578 16.4476 7.17578 18.7497V81.2497C7.17578 83.5518 9.04036 85.4163 11.3424 85.4163H90.5091C92.8112 85.4163 94.6758 83.5518 94.6758 81.2497V27.083C94.6758 24.7809 92.8112 22.9163 90.5091 22.9163H54.7341C53.6299 22.9163 52.5695 22.4768 51.7883 21.6955Z" fill="url(#paint0_linear_512_23528)"/>
+                    <path d="M45.8966 30.0295L52.7049 23.2212C52.8987 23.0274 53.1633 22.917 53.4404 22.917H90.5091C92.8112 22.917 94.6758 24.7816 94.6758 27.0837V81.2503C94.6758 83.5524 92.8112 85.417 90.5091 85.417H11.3424C9.04036 85.417 7.17578 83.5524 7.17578 81.2503V32.292C7.17578 31.717 7.64245 31.2503 8.21745 31.2503H42.9508C44.0549 31.2503 45.1154 30.8107 45.8966 30.0295Z" fill="url(#paint1_linear_512_23528)"/>
+                    <defs>
+                        <linearGradient id="paint0_linear_512_23528" x1="50.9258" y1="13.9747" x2="50.9258" y2="31.2018" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#EBA600"/>
+                        <stop offset="1" stop-color="#C28200"/>
+                        </linearGradient>
+                        <linearGradient id="paint1_linear_512_23528" x1="50.9258" y1="22.6128" x2="50.9258" y2="85.3816" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#FFD869"/>
+                        <stop offset="1" stop-color="#FEC52B"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                </div>
+            </button>
+        </a>
         <div class="w-40 h-28 relative">
             <div class="left-0 top-[90.93px] absolute text-gray-500 text-xs font-medium font-['Inter'] leading-none">Accounts Payable_Year</div>
             <div class="w-24 h-24 left-[16.62px] top-0 absolute">

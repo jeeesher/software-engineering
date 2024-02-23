@@ -3,6 +3,16 @@
     <x-slot name="header" class="flex item-center justify-between">
         <h2 class="font-semibold text-3xl text-black dark:text-gray-200 leading-right ml-60 flex" style="padding-top: 4rem;">
             {{ __('Add New Payable') }}
+            <!-- Script for Modal Form for Particular Button -->
+            <script>
+                importTE();
+                
+                function importTE() {
+                    import('tw-elements').then(({ Modal, Ripple, initTE }) => {
+                        initTE({ Modal, Ripple });
+                    });
+                }
+            </script>            
         </h2>
     </x-slot>
 
@@ -118,6 +128,7 @@
 
             
             <div class="bg-white dark:bg-gray-800 sm:rounded-lg flex-grow lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center" style="align-self: flex-start; margin-top: 0; padding-top: 0;">             
+                <!-- Payable Files Upload Field -->                
                 <div>
                     <div class="flex items-center justify-between">
                         <div class="text-zinc-950 text-lg font-semibold font-['Inter'] leading-loose">Payable Preview</div>
@@ -232,6 +243,7 @@
                     </div>
                 </div>
 
+                <!-- Particular Input Field -->
                 <div>
                     <div class="flex items-center justify-between mt-6">
                         <div class="text-zinc-950 text-lg font-semibold font-['Inter'] leading-loose">Particular</div>
@@ -239,7 +251,7 @@
 
                     <!-- Add Particular Button -->
                     <div class="mt-3">
-                        <x-secondary-button class="bg-white border border-zinc-200 gap-2">
+                        <x-secondary-button onclick="particular_add.showModal()" class="bg-white border border-zinc-200 gap-2" >
                             <div class="w-4 h-4 relative">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                     <path d="M3.33203 8.00001H12.6654M7.9987 3.33334V12.6667" stroke="#18181B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -247,8 +259,18 @@
                             </div>
                             <div class="text-zinc-950 text-sm font-medium font-['Inter'] leading-tight">Add Particular Here</div>
                         </x-secondary-button>
+                        <dialog id="particular_add" class="modal border border-zinc-200 gap-2">
+                            <div class="modal-box p-4 border border-zinc-200">
+                                <h3 class="font-bold text-lg mb-4">Hello!</h3>
+                                <p class="py-4">Press ESC key or click the button below to close</p>
+                                <div class="modal-action">
+                                    <form method="dialog">
+                                        <button class="btn">Close</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </dialog>
                     </div>
-
                 </div>
             </div>
         </div>
